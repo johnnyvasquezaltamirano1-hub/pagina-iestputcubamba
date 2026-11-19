@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 1100 360">
+<title>Ilustración del programa de estudios</title><rect width="1100" height="360" rx="15" fill="#eaf0f5"/>
+<circle cx="908" cy="36" r="233" fill="#dce8ef"/>
+<circle cx="1093" cy="333" r="205" fill="#d6e4ec" opacity=".72"/>
+<path d="M0 305H1100" stroke="#c7d8e4" stroke-width="2"/><path d="M115 310c140-84 244-84 367 0M475 310c110-66 229-70 360 0M747 310c80-57 166-57 260 0" fill="none" stroke="#8caa96" stroke-width="18" opacity=".58"/>
+ <circle cx="783" cy="96" r="43" fill="#d3b672"/>
+ <path d="M290 284V121m0 79q-93-8-92-80 78 0 92 80Zm0-25q102-5 103-85-90 2-103 85Z" fill="#91b4a0" stroke="#467866" stroke-width="6" stroke-linejoin="round"/>
+ <path d="M440 284V164m0 73q-69-5-75-61 67 0 75 61Zm0-27q72-8 78-68-71 5-78 68Z" fill="#a6c5ad" stroke="#467866" stroke-width="6" stroke-linejoin="round"/>
+ <path d="M595 283V194m0 51q-52-6-60-47 52 4 60 47Zm0-22q55-4 59-50-55 5-59 50Z" fill="#91b4a0" stroke="#467866" stroke-width="5" stroke-linejoin="round"/>
+ <path d="M152 287h692" stroke="#628f72" stroke-width="7" stroke-linecap="round"/></svg>

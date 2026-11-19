@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="Imagen institucional de respaldo">
+  <rect width="1200" height="750" fill="#e8eff4"/>
+  <path d="M0 595h1200v155H0z" fill="#d9e5ed"/>
+  <path d="M98 591h1000v-22H98z" fill="#bccedc"/>
+  <path d="M184 568V251L600 99l416 152v317" fill="#cadbe7" stroke="#a4bacb" stroke-width="8"/>
+  <path d="M206 277h788v25H206z" fill="#b7cad9"/>
+  <path d="M245 321h138v95H245zm204 0h138v95H449zm204 0h138v95H653zm204 0h101v95H857z" fill="#eaf2f7" stroke="#a4bacb" stroke-width="6"/>
+  <path d="M245 444h138v95H245zm204 0h138v95H449zm204 0h138v95H653zm204 0h101v95H857z" fill="#eaf2f7" stroke="#a4bacb" stroke-width="6"/>
+  <path d="M559 568V446h82v122" fill="#a4bacb"/>
+  <path d="M560 131h79v90h-79z" fill="#eaf2f7" stroke="#9bb2c5" stroke-width="6"/>
+  <path d="M600 132v88m-40-44h79" stroke="#9bb2c5" stroke-width="5"/>
+  <path d="M110 570l65-68 62 68zm854 0 64-69 65 69z" fill="#b8cfd6"/>
+</svg>
