@@ -1,0 +1,20 @@
+IESTP UTCUBAMBA - PROYECTOS CON MYSQL
+
+1. CONSERVA UNA COPIA DE TU CARPETA ORIGINAL.
+2. Copia el contenido de esta carpeta institutional_site a C:\xampp\htdocs\iestp_utcubamba_php\institutional_site (trabaja sobre una COPIA).
+3. Inicia Apache y MySQL en XAMPP. No vuelvas a importar la base si ya tienes sus 24 tablas.
+4. Crea el administrador UNA SOLA VEZ desde CMD de Windows:
+   cd C:\xampp\htdocs\iestp_utcubamba_php\institutional_site
+   C:\xampp\php\php.exe backend\crear_administrador.php tu_correo@ejemplo.com
+   Introduce nombre y una contraseña NUEVA de al menos 12 caracteres. No uses la clave anterior del JavaScript.
+5. Abre http://localhost/iestp_utcubamba_php/institutional_site/index.html
+6. Baja al pie de página y entra a Panel de atención. Inicia sesión con el correo creado.
+7. Agrega proyectos. Se guardan en tablas proyectos e integrantes_proyecto de MySQL.
+8. Si el puerto o usuario de MySQL es distinto, ajusta backend/conexion.php en tu copia.
+
+IMPORTANTE:
+- Esta etapa integra SOLO proyectos con MySQL. Reclamaciones y sugerencias siguen en almacenamiento local.
+- El acceso administrativo requiere HTTPS y controles adicionales antes de publicarse en internet.
+- No elimines registros existentes ni ejecutes scripts DROP TABLE.
+- Los proyectos guardados antes en localStorage NO se migran automáticamente.
+- No compartas tu contraseña ni publiques conexion.php con credenciales reales.

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es-PE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12304d">
+  <meta name="description" content="Panel local de atención y participación del IESTP Utcubamba">
+  <title>Panel de atención | IESTP Utcubamba</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/registro-store.js" defer></script>
+  <script src="assets/js/administracion.js" defer></script>
+</head>
+<body class="feedback-page admin-page">
+  <a href="#contenido" class="skip-link">Saltar al contenido</a>
+  <header class="feedback-head"><div class="shell admin-head-inner">
+    <a class="feedback-brand" href="index.html"><img alt="Escudo del IESTP Utcubamba" src="assets/img/escudo-ie-stp.png"><span>IESTP UTCUBAMBA<br><small>Panel de atención</small></span></a>
+    <div class="admin-top-actions"><a class="back-link" href="index.html">Volver al inicio</a><button class="back-link admin-logout" id="adminLogout" type="button" hidden>Cerrar sesión</button></div>
+  </div></header>
+  <main id="contenido" class="feedback-main admin-main">
+    <section class="admin-login" id="adminLogin">
+      <div class="feedback-intro"><span class="feedback-tag">GESTIÓN DE ATENCIÓN</span><h1>Acceso al panel</h1><p>Consulta y organiza las sugerencias y reclamaciones guardadas en este navegador.</p></div>
+      <div class="feedback-panel admin-login-card">
+        <form id="adminLoginForm" autocomplete="on">
+          <h2>Iniciar sesión</h2>
+          <label for="usuarioAdmin">Usuario</label>
+          <input id="usuarioAdmin" type="text" name="usuario" required autocomplete="username" placeholder="Usuario">
+          <label for="claveAdmin">Contraseña</label>
+          <input id="claveAdmin" type="password" name="clave" required autocomplete="current-password" placeholder="Contraseña">
+          <button type="submit" class="feedback-button admin-login-button">Ingresar</button>
+          <p role="alert" id="adminLoginError" class="feedback-message error"></p>
+        </form>
+      </div>
+      <p class="admin-note">Acceso de administrador con PHP y MySQL. Ingresa con tu correo y contraseña configurados.</p>
+    </section>
+    <section class="admin-panel" id="adminPanel" hidden>
+      <div class="feedback-intro"><span class="feedback-tag">BANDEJA DE ATENCIÓN</span><h1>Registros recibidos en este navegador</h1><p>Gestiona las solicitudes guardadas localmente. La actualización de un estado no significa que se haya enviado un correo electrónico.</p></div>
+      <div class="admin-stats" aria-label="Resumen de registros">
+        <div><span>Total de registros</span><strong id="recordsCount">0</strong></div>
+        <div><span>Sugerencias</span><strong id="suggestionCount">0</strong></div>
+        <div><span>Reclamaciones y quejas</span><strong id="complaintCount">0</strong></div>
+      </div>
+      <div class="feedback-panel admin-table-card">
+        <div class="admin-table-header"><div><h2>Solicitudes</h2><p>Busca por código, nombre o contenido.</p></div><button type="button" id="exportRecords" class="feedback-button secondary">Exportar CSV</button></div>
+        <div class="admin-filters">
+          <label>Buscar <input type="search" id="recordQuery" placeholder="Código, nombre, asunto…"></label>
+          <label>Tipo <select id="recordType"><option value="">Todos</option><option value="sugerencia">Sugerencias</option><option value="reclamacion">Reclamaciones</option></select></label>
+          <label>Estado <select id="recordState"><option value="">Todos</option><option value="Nuevo">Nuevo</option><option value="En revisión">En revisión</option><option value="Atendido">Atendido</option></select></label>
+        </div>
+        <div class="admin-table-wrap"><table class="admin-table"><thead><tr><th>Código</th><th>Tipo</th><th>Nombre</th><th>Asunto / área</th><th>Fecha</th><th>Estado</th><th>Acción</th></tr></thead><tbody id="recordsBody"></tbody></table></div>
+        <p id="recordsEmpty" class="admin-empty" hidden>No hay registros para mostrar. Puedes añadir uno desde el buzón o el libro de reclamaciones.</p>
+        <p role="status" aria-live="polite" id="adminFeedback" class="admin-feedback"></p>
+      </div>
+      <section class="feedback-panel admin-detail" id="recordDetail" aria-labelledby="detailTitle" hidden>
+        <div class="admin-detail-heading"><div><h2 id="detailTitle">Detalle del registro</h2><p id="detailMeta"></p></div><button type="button" id="closeDetail" class="admin-small-button">Cerrar</button></div>
+        <dl class="admin-detail-fields" id="detailFields"></dl>
+        <div class="admin-detail-actions"><label>Estado del registro <select id="detailState"><option>Nuevo</option><option>En revisión</option><option>Atendido</option></select></label><button type="button" class="feedback-button" id="saveState">Guardar estado</button><button type="button" class="feedback-button admin-delete" id="deleteRecord">Eliminar registro</button></div>
+      </section>
+      <section class="feedback-panel project-admin" aria-labelledby="projectsAdminTitle"><h2 id="projectsAdminTitle">Administrar proyectos de estudiantes</h2><p>Solo disponible tras iniciar sesión en este panel. Los enlaces se guardan en MySQL y pueden consultarse desde otros dispositivos cuando publiques el sitio.</p><form id="projectForm"><input type="hidden" id="projectEditId"><label>Nombre del proyecto <input id="projectName" maxlength="100" required placeholder="Ej. Sistema de restaurante"></label><label>Estudiante o equipo <input id="projectAuthor" maxlength="100" required placeholder="Ej. Equipo APSTI"></label><label>Enlace del proyecto <input id="projectUrl" type="url" required placeholder="https://ejemplo.com"></label><div class="project-actions"><button class="feedback-button" type="submit">Guardar proyecto</button><button class="feedback-button secondary" id="projectCancel" type="button">Cancelar edición</button><button class="feedback-button secondary" id="projectExport" type="button">Exportar JSON</button></div></form><p id="projectAdminMessage" role="status"></p><div id="projectAdminList"></div></section><p class="admin-note">Las sugerencias y reclamaciones todavía se guardan localmente en este navegador; no son constancias oficiales. La gestión de proyectos sí utiliza MySQL.</p>
+    </section>
+  </main>
+  <footer class="feedback-page-footer">© 2026 IESTP Utcubamba · Proyecto académico no oficial · <a href="index.html">Volver a la portada</a></footer>
+<script src="assets/js/proyectos.js" defer></script>
+</body>
+</html>
